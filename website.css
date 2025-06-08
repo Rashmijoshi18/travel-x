@@ -1,0 +1,191 @@
+ body {
+     background: #f9f9f9;
+     color: #333;
+     margin: 0;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     text-align: center;
+ }
+
+ nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px 40px;
+     background-color: #ffffff;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+ }
+
+ nav .logo h1 {
+     color: #ff9800;
+     font-size: 28px;
+     margin: 0;
+ }
+
+ nav .menu a,
+ nav .register a {
+     margin: 0 15px;
+     text-decoration: none;
+     color: #333;
+     font-weight: bold;
+     transition: all 0.3s ease;
+     padding-bottom: 5px;
+     position: relative;
+ }
+
+ nav .menu a::after,
+ nav .register a::after {
+     content: '';
+     position: absolute;
+     width: 0;
+     height: 2px;
+     left: 0;
+     bottom: 0;
+     background: #ff9800;
+     transition: 0.3s;
+ }
+
+ nav .menu a:hover::after,
+ nav .register a:hover::after {
+     width: 100%;
+ }
+
+ .hero {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 100px 20px;
+     background: url('travel.jpg') center/cover no-repeat;
+     background-color: rgba(0, 0, 0, 0.5);
+     background-blend-mode: darken;
+     color: white;
+     min-height: 90vh;
+ }
+
+ .hero-content {
+     max-width: 700px;
+     padding: 20px;
+ }
+
+ .hero h1 {
+     font-size: 56px;
+     margin: 20px 0;
+ }
+
+ .hero h2 {
+     font-size: 32px;
+     color: #ffda9e;
+ }
+
+ .hero p {
+     font-size: 20px;
+     margin: 20px 0 30px;
+ }
+
+ .hero .book a {
+     background-color: #ff9800;
+     color: white;
+     padding: 14px 30px;
+     border-radius: 30px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: background-color 0.3s;
+
+ }
+
+ .hero .book a:hover {
+     background-color: #e08800;
+ }
+
+ .center-text {
+     max-width: 800px;
+     margin: 60px auto;
+     padding: 20px;
+     font-size: 18px;
+     line-height: 1.6;
+     background-color: #fff;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+     border: solid 2px #ecc07e;
+ }
+
+ .center-text:hover {
+     background-color: #efe5d1f5;
+
+ }
+
+
+ .steps {
+     display: flex;
+     justify-content: center;
+     gap: 40px;
+     flex-wrap: wrap;
+     padding: 40px 20px;
+ }
+
+ .steps .box {
+     background: white;
+     padding: 30px;
+     border-radius: 12px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     width: 250px;
+     text-align: center;
+     border: solid 2px #f1c481;
+ }
+
+ .box:hover {
+     background-color: #efe5d1f5;
+ }
+
+
+ .steps .box img {
+     width: 60px;
+     height: 60px;
+     margin-bottom: 15px;
+ }
+
+ .subscribe {
+     padding: 40px 20px;
+ }
+
+ .subscribe input {
+     padding: 10px;
+     width: 250px;
+     border-radius: 20px;
+     border: 1px solid #ccc;
+     margin: 10px;
+ }
+
+ .subscribe button {
+     padding: 10px 25px;
+     background-color: #ff9800;
+     border: none;
+     color: white;
+     font-weight: bold;
+     border-radius: 20px;
+     cursor: pointer;
+     transition: background-color 0.3s;
+ }
+
+ .subscribe button:hover {
+     background-color: #e08800;
+ }
+
+ footer.end {
+     text-align: center;
+     padding: 30px;
+     background-color: #f0f0f0;
+     margin-top: 40px;
+ }
+
+ footer a {
+     color: #333;
+     text-decoration: none;
+ }
+
+ footer img {
+     vertical-align: middle;
+     margin-right: 5px;
+ }
