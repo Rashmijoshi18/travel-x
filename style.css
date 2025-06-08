@@ -1,50 +1,60 @@
+/* General Body */
 body {
     background: #f0f4f8;
-    /* softer light blue-gray */
     color: #2c3e50;
-
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     line-height: 1.6;
 }
 
+/* NAVIGATION */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     background-color: #ffffff;
-
     box-shadow: 0 2px 12px rgba(44, 62, 80, 0.1);
-    /* subtle blue-gray shadow */
     position: sticky;
     top: 0;
     z-index: 1000;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 nav .logo h1 {
     color: #e67e22;
-    /* richer orange */
     font-size: 26px;
     margin: 0;
     letter-spacing: 1px;
+    cursor: default;
 }
 
-nav .menu a,
-nav .register a {
-    margin: 0 12px;
+nav .menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    transition: right 0.3s ease;
+}
+
+nav .menu a {
     text-decoration: none;
     color: #34495e;
-    /* softer dark blue */
     font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 6px;
     position: relative;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-nav .menu a::after,
-nav .register a::after {
+nav .menu a:hover,
+nav .menu a:focus {
+    color: #e67e22;
+    background-color: #fff3e0;
+    outline: none;
+}
+
+nav .menu a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -52,19 +62,68 @@ nav .register a::after {
     left: 0;
     bottom: -4px;
     background: #e67e22;
-    transition: 0.3s ease;
+    transition: width 0.3s ease;
 }
 
 nav .menu a:hover::after,
-nav .register a:hover::after {
+nav .menu a:focus::after {
     width: 100%;
 }
 
-nav .menu a:hover,
-nav .register a:hover {
+nav .register a {
+    border: 2px solid #e67e22;
+    padding: 8px 22px;
+    font-weight: 700;
+    border-radius: 25px;
     color: #e67e22;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
 }
 
+nav .register a:hover,
+nav .register a:focus {
+    background-color: #e67e22;
+    color: white;
+    outline: none;
+}
+
+/* HAMBURGER MENU BUTTON (hidden on desktop) */
+nav .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1101;
+}
+
+nav .hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: #34495e;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger animation when active */
+nav .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+nav .hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+nav .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* HERO SECTION */
 .hero {
     display: flex;
     justify-content: center;
@@ -73,7 +132,6 @@ nav .register a:hover {
     padding: 100px 20px;
     background: linear-gradient(rgba(33, 37, 41, 0.6), rgba(33, 37, 41, 0.6)), url('travel.jpg') center/cover no-repeat;
     color: #f8f9fa;
-    /* light gray */
     min-height: 90vh;
     flex-direction: column;
 }
@@ -82,17 +140,17 @@ nav .register a:hover {
     max-width: 650px;
 }
 
-.hero h1 {
-    font-size: 50px;
-    margin: 15px 0;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+.hero h2 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 1.5px;
 }
 
-.hero h2 {
-    font-size: 30px;
-    color: #f39c12;
-    /* warm gold */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+.hero h1 {
+    font-size: 52px;
+    margin: 10px 0 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .hero p {
@@ -105,33 +163,34 @@ nav .register a:hover {
 .hero .book a {
     background-color: #e67e22;
     color: white;
-    padding: 12px 26px;
+    padding: 14px 28px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: inline-block;
+    font-weight: 700;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
 }
 
-.hero .book a:hover {
+.hero .book a:hover,
+.hero .book a:focus {
     background-color: #cf711b;
     box-shadow: 0 8px 20px rgba(207, 113, 27, 0.6);
+    outline: none;
 }
 
+/* CENTER TEXT */
 .center-text {
     max-width: 800px;
     margin: 50px auto;
     padding: 25px;
     background-color: #fffdf9;
-    /* slightly creamy */
     border-radius: 12px;
     border: 1px solid #f7c273;
-    /* softer border */
     box-shadow: 0 2px 8px rgba(230, 126, 34, 0.1);
     color: #3a3a3a;
 }
 
+/* STEPS SECTION */
 .steps {
     display: flex;
     justify-content: center;
@@ -149,6 +208,7 @@ nav .register a:hover {
     transition: background-color 0.3s ease;
     border: 1px solid #f7b64a;
     text-align: center;
+    cursor: default;
 }
 
 .steps .box:hover {
@@ -168,9 +228,9 @@ nav .register a:hover {
     color: #34495e;
 }
 
+/* SUBSCRIBE */
 .subscribe {
     background: #fff7e6;
-    /* soft cream */
     padding: 40px 20px;
     max-width: 500px;
     margin: 50px auto;
@@ -221,15 +281,17 @@ nav .register a:hover {
     box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
 }
 
-.subscribe button:hover {
+.subscribe button:hover,
+.subscribe button:focus {
     background-color: #cf711b;
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(207, 113, 27, 0.6);
+    outline: none;
 }
 
+/* FOOTER */
 footer.end {
     background-color: #e3e8ef;
-    /* very light blue-gray */
     padding: 30px;
     margin-top: 40px;
     font-size: 14px;
@@ -237,41 +299,67 @@ footer.end {
     color: #34495e;
 }
 
-footer a {
+footer.end a {
     color: #2c3e50;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
-footer a:hover {
+footer.end a:hover,
+footer.end a:focus {
     color: #e67e22;
+    outline: none;
 }
 
+/* RESPONSIVE */
 
+/* MOBILE NAVIGATION */
 @media (max-width: 768px) {
 
     nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
         padding: 15px 20px;
+        flex-wrap: nowrap;
+        position: relative;
     }
 
     nav .menu {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 220px;
+        height: calc(100vh - 60px);
+        background-color: #ffffff;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 20px;
+        box-shadow: -2px 0 10px rgba(44, 62, 80, 0.15);
+        transition: right 0.3s ease;
+        border-left: 1px solid #e7c27a;
+        z-index: 1099;
+        overflow-y: auto;
+    }
+
+    nav .menu.active {
+        right: 0;
+    }
+
+    nav .menu a {
+        font-size: 18px;
+        padding: 12px 16px;
+        text-align: left;
+    }
+
+    nav .register {
+        display: none;
+    }
+
+    nav .hamburger {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        width: 100%;
     }
 
-    nav .menu a,
-    nav .register a {
-        margin: 5px 10px;
-        font-size: 16px;
-    }
-
+    /* Hero smaller text on mobile */
     .hero h1 {
         font-size: 28px;
         margin: 10px 0;
@@ -285,55 +373,5 @@ footer a:hover {
     .hero p {
         font-size: 14px;
         margin-bottom: 25px;
-    }
-
-    .hero .book a {
-        padding: 10px 22px;
-        font-size: 16px;
-    }
-
-    .steps {
-        flex-direction: column;
-        align-items: center;
-        padding: 30px 10px;
-        gap: 20px;
-    }
-
-    .steps .box {
-        width: 90%;
-        max-width: 320px;
-        padding: 20px;
-        font-size: 14px;
-    }
-
-    .subscribe {
-        flex-direction: column;
-        padding: 30px 20px;
-        max-width: 95%;
-        margin: 30px auto;
-        box-shadow: 0 8px 20px rgba(230, 126, 34, 0.15);
-        border-radius: 12px;
-    }
-
-    .subscribe h2 {
-        font-size: 20px;
-        margin-bottom: 20px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .subscribe input,
-    .subscribe button {
-        width: 100%;
-        max-width: 100%;
-        margin: 10px 0;
-        font-size: 16px;
-        padding: 14px 20px;
-        box-sizing: border-box;
-    }
-
-    footer.end {
-        font-size: 13px;
-        padding: 25px 15px;
     }
 }

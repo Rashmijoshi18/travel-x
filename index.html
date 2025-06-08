@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Travel-X | Explore the World</title>
 
     <link rel="stylesheet" href="style.css" />
@@ -21,6 +21,14 @@
         function fun3() {
             alert("Thank you for booking. We are always here to help you!");
         }
+
+        // Toggle menu on mobile
+        function toggleMenu() {
+            const menu = document.querySelector('nav .menu');
+            const hamburger = document.querySelector('.hamburger');
+            menu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
     </script>
 </head>
 
@@ -29,12 +37,21 @@
         <div class="logo">
             <h1><b>Travel-X</b></h1>
         </div>
+
+        <!-- Hamburger menu button for mobile -->
+        <button class="hamburger" aria-label="Toggle navigation menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <div class="menu">
             <a href="#">Home</a>
             <a href="#destinations">Destinations</a>
             <a href="#offers">Offers</a>
             <a href="#services">Services</a>
         </div>
+
         <div class="register">
             <a href="#" onclick="fun1()">Register</a>
         </div>
