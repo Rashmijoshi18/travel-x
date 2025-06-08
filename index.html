@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel-X | Explore the World</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        function fun1() {
+            alert("Thank you for registering. You have successfully joined Travel-X!");
+        }
+
+        function fun2() {
+            alert("Feel free to contact us anytime! Scroll to the bottom for contact details.");
+        }
+
+        function fun3() {
+            alert("Thank you for booking. We are always here to help you!");
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1><b>Travel-X</b></h1>
+        </div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#offers">Offers</a>
+            <a href="#services">Services</a>
+        </div>
+        <div class="register">
+            <a href="#" onclick="fun1()">Register</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to</h2>
+            <h1>Travel-X</h1>
+            <p>Discover breathtaking destinations, exclusive offers, and exceptional services that make your travel
+                unforgettable.</p>
+            <div class="book">
+                <a href="#book" onclick="fun3()">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="center-text">
+        <h2>Why Choose Travel-X?</h2>
+        <p>We curate the best travel experiences around the globe. Whether you're an adventure seeker or looking for a
+            peaceful retreat, we have something special just for you.</p>
+    </div>
+
+    <div class="steps">
+        <div class="box">
+            <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="explore" />
+            <h3>Explore</h3>
+            <p>Find the most beautiful and unique places to travel worldwide.</p>
+        </div>
+        <div class="box">
+            <img src="https://cdn-icons-png.flaticon.com/512/69/69941.png" alt="book" />
+            <h3>Book</h3>
+            <p>Easy booking with instant confirmation and flexible payment options.</p>
+        </div>
+        <div class="box">
+            <img src="https://cdn-icons-png.flaticon.com/512/929/929566.png" alt="enjoy" />
+            <h3>Enjoy</h3>
+            <p>Pack your bags and get ready for a trip of a lifetime with us.</p>
+        </div>
+    </div>
+
+    <div class="subscribe">
+        <h2>Subscribe to our Newsletter</h2>
+        <input type="email" placeholder="Enter your email" />
+        <button onclick="alert('Thank you for subscribing!')">Subscribe</button>
+    </div>
+
+    <footer class="end">
+        <p>Made with ❤️ by Team Joshi. | <a href="#" onclick="fun2()">Contact Us @ 1234567890</a></p>
+    </footer>
+</body>
+
+</html>
