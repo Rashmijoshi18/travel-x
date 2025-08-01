@@ -11,15 +11,6 @@
 - 📱 Fully responsive layout
 - 🎨 Beautiful color palette inspired by natural travel destinations
 
-## 📁 Folder Structure
-
-├── index.html # Main homepage
-
-├── style.css # External CSS styling
-
-├── assets/ # Images and icons
-
-├── README.md # Project documentation
 
 ## 🛠️ Technologies Used
 
