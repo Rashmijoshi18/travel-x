@@ -11,16 +11,6 @@
 - 📱 Fully responsive layout
 - 🎨 Beautiful color palette inspired by natural travel destinations
 
-## 📁 Folder Structure
-
-├── index.html # Main homepage
-
-├── style.css # External CSS styling
-
-├── assets/ # Images and icons
-
-├── README.md # Project documentation
-
 ## 🛠️ Technologies Used
 
 - HTML
@@ -29,13 +19,12 @@
 
 ## 🎨 Color Palette
 
-| Element         | Color Code  | Description                     |
-|----------------|-------------|---------------------------------|
-| Primary Color  | `#ff9800`   | Vibrant Orange                  |
-| Accent Color   | `#ffd180`   | Light Amber                     |
-| Background     | `#fff8f0`   | Creamy White Background         |
-| Text Color     | `#333333`   | Deep Gray                       |
+| Element       | Color Code | Description             |
+| ------------- | ---------- | ----------------------- |
+| Primary Color | `#ff9800`  | Vibrant Orange          |
+| Accent Color  | `#ffd180`  | Light Amber             |
+| Background    | `#fff8f0`  | Creamy White Background |
+| Text Color    | `#333333`  | Deep Gray               |
 
 🙌 Contributing
 Contributions are welcome! Feel free to fork the repo and submit a pull request.
-
